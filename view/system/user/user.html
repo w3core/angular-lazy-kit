@@ -1,0 +1,54 @@
+<h3 class="viewTitle">{{$title}}</h3>
+<div class="viewBody systemUser" ng-init="gender='female'">
+  <link rel="stylesheet" href="/view/system/user/user.css" />
+  <div class="columns">
+    <div>
+      <label class="avatar">
+        <span class="caption">Avatar</span>
+        <div>
+          <div fileimage="imageHandler" icon="'profile-'+ (gender||'male')" required></div>
+          <a href="#" class="ui-button permissions">Permissions</a>
+        </div>
+      </label>
+    </div>
+    <div>
+      <label>
+        <span class="caption">Username</span>
+        <input type="text" class="ui-input" />
+      </label>
+      <label>
+        <span class="caption">First Name</span>
+        <input type="text" class="ui-input" />
+      </label>
+      <label>
+        <span class="caption">Last Name</span>
+        <input type="text" class="ui-input" />
+      </label>
+      <label>
+        <span class="caption">Email</span>
+        <input type="email" class="ui-input" />
+      </label>
+      <label>
+        <span class="caption">Gender</span>
+        <select class="ui-select" ng-model="gender"><option value="male">Male</option><option value="female">Female</option></select>
+      </label>
+      <label>
+        <span class="caption">State</span>
+        <select class="ui-select"><option></option></select>
+      </label>
+      <label>
+        <span class="caption">Country</span>
+        <select class="ui-select"><option></option></select>
+      </label>
+      <label>
+        <span class="caption">Mobile</span>
+        <input type="tel" class="ui-input" />
+      </label>
+    </div>
+  </div>
+  <div class="floats actions" spinner="gender=='male'">
+    <button ng-click="resetPassword()" class="ui-button ui-button-secondary left">Reset Password</button>
+    <button ng-click="save()" class="ui-button ui-button-primary">Save</button>
+    <button ng-click="cancel()" class="ui-button ui-button-secondary">Cancel</button>
+  </div>
+</div>

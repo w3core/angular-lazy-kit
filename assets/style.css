@@ -1,0 +1,157 @@
+/* Common [START] */
+@import "/assets/font/ico/ico.css";
+@import "spin.css";
+@import "form.css";
+
+html, body {margin:0; padding:0; height:100%; overflow:hidden; font-family:sans-serif; font-size:16px;}
+@-ms-viewport {width:device-width;}
+:focus {outline:none;}
+::-moz-focus-inner {border:0;}
+*, :before, :after {box-sizing:border-box; vertical-align:middle;}
+img {border:0 none;}
+
+.hidden {position:absolute!important; width:0!important; height:0!important; opacity:0!important; margin:0!important; padding:0!important; overflow:hidden!important;}
+
+.floats > .left {float:left;}
+.floats > .right {float:right;}
+.floats:after, .clear {content:""; display:block; position:relative; height:0; margin:0; padding:0; overflow:hidden; float:none; clear:both;}
+
+[before]:not([before=""]):before {content:attr(before)!important;}
+[after]:not([after=""]):after {content:attr(after)!important;}
+[empty-before]:not([empty-before=""]):empty:before {content:attr(empty-before)!important;}
+[empty-after]:not([empty-after=""]):empty:after {content:attr(empty-after)!important;}
+
+img.ui-ratio-provider {
+  /* data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7 */
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  border: 0 none;
+  outline: 0 none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #4caf50;
+  text-decoration: none;
+}
+a:hover {
+  color: #ff992c;
+}
+
+/* Common [END] */
+/* Skeleton [START] */
+#head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 1em 2em 2em;
+  background: #482f8f;
+  box-shadow: inset 0em 0 1em;
+}
+/* Skeleton [END] */
+
+#head > .head {
+  padding: 1em 1.5em 0;
+  position: relative;
+  background: #333;
+  border-bottom: 1px solid #fff;
+}
+#head > .head:after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  left: 0;
+  right: 0;
+  bottom: -.3em;
+  height: .3em;
+  box-shadow: 0 -.2em .2em rgba(0,0,0,.2);
+  z-index: 10;
+}
+#head .menu * {
+  position: relative;
+  white-space: nowrap;
+}
+#head .menu li ul {display: none; padding: 0;}
+#head .menu li:hover {z-index: 20;}
+#head .menu li:hover > ul {display: block;}
+#head .menu, #head .menu ul {list-style: none; margin: 0;}
+#head .menu > li {display: inline-block; margin-top: .24em;}
+#head .menu > li ul {
+  position: absolute;
+  box-shadow: 0 0 .8em #000;
+  z-index: 10;
+}
+#head .menu > li ul ul {left: 100%; top: 0;}
+#head .menu a {
+  display: block;
+  text-decoration: none;
+  padding: .3em .6em;
+}
+#head .menu a {color: #333;}
+#head .menu li {background: #f3f3f3;}
+#head .menu li:hover > a {z-index: 20; background: #666; color: #fff;}
+#head .menu li:hover > ul li, #head .menu > li:hover > a {background: #fff; color: #06b;}
+#head .menu > li li:hover > a:hover {background: #06b; color: #fff;}
+
+#head .menu > li, #head .menu > li > a {
+  border-top-left-radius: .3em;
+  border-top-right-radius: .3em;
+}
+#head .menu > li {box-shadow: 0 -.2em .2em -.2em;}
+
+#head .menu a.active {
+  z-index: 20;
+  cursor: default;
+  background: #06b;
+  color: #fff;
+}
+#head .menu >li > a.active {background: #fff; color: #06b;}
+
+.viewTitle {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0 0 .8em;
+  font-size: 1.125em;
+  font-weight: normal;
+  text-decoration: none;
+  font-style: normal;
+  color: #eee;
+  text-shadow: 0 0 1em;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}
+.viewBody {
+  display: inline-block;
+  background: rgba(255,255,255,1);
+  padding: 1em;
+  border-radius: .2em;
+  box-shadow: 0 0 0 .5em rgba(255,255,255,.2);
+}
+#body [tableview][theme=material] {margin: 0;}
+[tableview] > .holder > table {
+  table-layout: fixed;
+}
+[tableview] > .holder > table > thead > tr > * > span:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80%;
+  display: inline-block;
+}
+[tableview][theme=material]>.holder>table>thead>tr>*.sortable>.sort:before,
+[tableview][theme=material]>.holder>table>thead>tr>*.sortable>.sort:after {
+  margin: 0 0 .12em
+}

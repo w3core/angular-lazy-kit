@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'ico';
+  src:url('ico.eot?1478615937921');
+  src:url('ico.eot?#iefix1478615937921') format('embedded-opentype'),
+      url('ico.ttf?1478615937921') format('truetype'),
+      url('ico.woff?1478615937921') format('woff'),
+      url('ico.svg?1478615937921#ico') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.ico:before, .ico-after:after {
+  font-family: 'ico';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ico-profile-male:before,.ico-profile-male-after:after{content:"\e040"}
+.ico-profile-female:before,.ico-profile-female-after:after{content:"\e041"}
+.ico-add:before,.ico-add-after:after{content:"\e145"}
+.ico-calendar:before,.ico-calendar-after:after{content:"\e900"}
+.ico-user:before,.ico-user-after:after{content:"\e901"}
+.ico-user2:before,.ico-user2-after:after{content:"\e902"}
+.ico-filter:before,.ico-filter-after:after{content:"\ea5b"}
+.ico-search:before,.ico-search-after:after{content:"\f002"}
+.ico-check:before,.ico-check-after:after{content:"\f00c"}
+.ico-close:before,.ico-close-after:after{content:"\f00d"}
+.ico-gear:before,.ico-gear-after:after{content:"\f013"}
+.ico-image:before,.ico-image-after:after{content:"\f03e"}
+.ico-backward:before,.ico-backward-after:after{content:"\f04a"}
+.ico-forward:before,.ico-forward-after:after{content:"\f04e"}
+.ico-chevron-left:before,.ico-chevron-left-after:after{content:"\f053"}
+.ico-chevron-right:before,.ico-chevron-right-after:after{content:"\f054"}
+.ico-plus:before,.ico-plus-after:after{content:"\f067"}
+.ico-minus:before,.ico-minus-after:after{content:"\f068"}
+.ico-chevron-up:before,.ico-chevron-up-after:after{content:"\f077"}
+.ico-chevron-down:before,.ico-chevron-down-after:after{content:"\f078"}
+.ico-angle-double-left:before,.ico-angle-double-left-after:after{content:"\f100"}
+.ico-angle-double-right:before,.ico-angle-double-right-after:after{content:"\f101"}
+.ico-angle-double-up:before,.ico-angle-double-up-after:after{content:"\f102"}
+.ico-angle-double-down:before,.ico-angle-double-down-after:after{content:"\f103"}
+.ico-angle-left:before,.ico-angle-left-after:after{content:"\f104"}
+.ico-angle-right:before,.ico-angle-right-after:after{content:"\f105"}
+.ico-angle-up:before,.ico-angle-up-after:after{content:"\f106"}
+.ico-angle-down:before,.ico-angle-down-after:after{content:"\f107"}
+.ico-sliders:before,.ico-sliders-after:after{content:"\f1de"}

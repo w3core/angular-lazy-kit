@@ -1,0 +1,48 @@
+<div class="contentStatic">
+  <link rel="stylesheet" href="/view/content/static/static.css" />
+  <script type="text/ng-template" id="static.body.cell.id">
+    <a href="#" ng-click="$scope.edit($row)">{{$cell}}</a>
+  </script>
+  <script type="text/ng-template" id="static.body.cell.status">
+    {{$cell ? 'Active' : 'Inactive'}}
+  </script>
+  <script type="text/ng-template" id="static.body.cell.manage">
+    <button ng-click="" class="ico ico-close ui-button ui-button-secondary"></button>
+  </script>
+  <div class="columns">
+    <div>
+      <h3 class="viewTitle">{{$title}}</h3>
+      <div class="viewBody">
+        <div tableview="tableContentOptions" tableview-theme="'material'"></div>
+        <button class="ico ico-plus addContent ui-button" ng-click="addContent()">Add Content</button>
+      </div>
+    </div>
+    <div ng-if="showEdit">
+      <h3 class="viewTitle">Edit Content</h3>
+      <div class="viewBody">
+        <label>
+          <span class="caption">Id</span>
+          <input type="text" ng-model="content.id" class="ui-input" readonly/>
+        </label>
+        <label>
+          <span class="caption">Content Name</span>
+          <input type="text" ng-model="content.name" class="ui-input" />
+        </label>
+        <label>
+          <span class="caption">Status</span>
+          <select class="ui-select available" ng-model="content.status">
+            <option value="1" ng-selected="content.status">Active</option>
+            <option value="0" ng-selected="!content.status">Inactive</option>
+          </select>
+        </label>
+        <div>
+          <textarea ckeditor="editorOptions" ng-model="content.content"></textarea>
+        </div>
+        <div class="actions">
+          <button ng-click="save()" class="ui-button ui-button-primary">Save</button>
+          <button ng-click="cancel()" class="ui-button ui-button-secondary">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+.systemUser * {
+  position: relative;
+}
+
+.systemUser > .columns {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.systemUser > .columns > * {
+  display: table-cell;
+  vertical-align: top;
+}
+.systemUser > .columns > :nth-child(2) {
+  padding-left: 1em;
+}
+.systemUser > .columns > * > label {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: 1em;
+  position: relative;
+}
+.systemUser > .columns > * > label > * {
+  display: table-cell;
+}
+.systemUser > .columns > * > label > .caption {
+  max-width: 0;
+  min-width: 0;
+  width: 6em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.systemUser > .columns > * > label > :nth-child(2) {
+  width: 100%;
+}
+.systemUser > .columns > * > label > .ico-calendar {
+  position: absolute;
+  right: .4em;
+  top: .5em;
+}
+.systemUser .permissions {
+  font-size: .875em;
+  margin: 1em 0 0;
+  width: 9em;
+  text-align: center;
+}
+.systemUser .actions {
+  text-align: right;
+}
+.systemUser > .columns > :first-child {width: 8em;}
+.systemUser > .columns label.avatar [fileimage] > .ui-input-image > i.ico:before {font-size: 6em; vertical-align: bottom;}
+.systemUser > .columns label.avatar > .caption,
+.systemUser > .columns label.avatar > div > * {vertical-align: top;}
+.systemUser > .columns label.avatar > .caption {display: none;}
+.systemUser .actions, .systemUser .columns {max-width: 40em;}
+@media (max-width: 37em) {
+  .systemUser > .columns > * {display: block;}
+  .systemUser > .columns > :first-child,
+  .systemUser > .columns > :nth-child(2) {padding-left: 0; width: auto;}
+  .systemUser > .columns label.avatar > .caption {display: table-cell;}
+  .systemUser .permissions {margin-top: 0; position: absolute; top: 0; right: 0;}
+}
+@media (max-width: 27.75em) {
+  .systemUser .permissions {margin-top: 1em; position: static;}
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <base href="/" />
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#4285f4" />
+  <meta name="msapplication-navbutton-color" content="#4285f4" />
+  <meta content="application/xhtml+xml; charset=UTF-8" http-equiv="content-type" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <title>{{$title}}</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/assets/style.css" />
+</head>
+<body>
+  <div id="head" ng-controller="defaultSubheader" ng-if="$layout.$subheader" ng-include="$layout.$subheader"></div>
+  <div id="body" ui-view></div>
+  <script src="config/bootloader.js"></script>
+</body>
+</html>

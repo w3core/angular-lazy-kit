@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+ <head>
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta content="application/xhtml+xml; charset=utf-8" http-equiv="content-type" />
+  <title></title>
+  <style type="text/css">
+    html, body {margin:0; padding:0; height:100%}
+    *, :before, :after {vertical-align:middle; height:50px; line-height:50px!important;}
+    :before, :after {font-size:32px; position:absolute; width:50px; text-align:center;}
+    :before {left:0px;}
+    :after {right:0px;}
+    pre {
+      display: block;
+      height: 150px;
+      overflow: auto;
+      line-height: 1.5em!important;
+      margin: 0;
+      background-color: #eee;
+      border-bottom: 1px solid #ddd;
+      resize: vertical;
+    }
+    i {
+      cursor:pointer;
+      display:inline-block;
+      position:relative;
+      box-sizing:border-box;
+      width:50%;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      font-style:normal;
+      border-bottom:1px solid #ddd;
+      color:#333;
+    }
+    i:hover {background:#eee;}
+    i:hover:before, i:hover:after {color:#31a0e7}
+    i:nth-child(odd) {padding-left:50px; padding-right:10px;}
+    i:nth-child(even) {padding-right:50px; padding-left:10px;}
+    i:nth-child(odd) {border-right:1px solid #ddd}
+  </style>
+ </head>
+ <body>
+  <script type="text/javascript">
+    function load (file) {
+      var x = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+      x.open("GET",file,false);
+      x.send();
+      return x.responseText;
+    }
+    var id = (new Date()).getTime().toString();
+    var svg = document.createElement('html');
+        svg.innerHTML = load('ico.svg').replace(/(\&\#x)/ig, '');
+        svg = svg.querySelectorAll('[glyph-name]');
+    var html = '';
+    var css = '';
+
+    css += "\
+@font-face {\n\
+  font-family: 'ico';\n\
+  src:url('ico.eot?"+id+"');\n\
+  src:url('ico.eot?#iefix"+id+"') format('embedded-opentype'),\n\
+      url('ico.ttf?"+id+"') format('truetype'),\n\
+      url('ico.woff?"+id+"') format('woff'),\n\
+      url('ico.svg?"+id+"#ico') format('svg');\n\
+  font-weight: normal;\n\
+  font-style: normal;\n\
+}\n\
+.ico:before, .ico-after:after {\n\
+  font-family: 'ico';\n\
+  speak: none;\n\
+  font-style: normal;\n\
+  font-weight: normal;\n\
+  font-variant: normal;\n\
+  text-transform: none;\n\
+  line-height: 1;\n\
+  -webkit-font-smoothing: antialiased;\n\
+  -moz-osx-font-smoothing: grayscale;\n\
+}";
+    for (var i=0; i<svg.length; i++) {
+      var name = svg[i].getAttribute('glyph-name');
+      var code = svg[i].getAttribute('unicode').replace(';', '');
+      css += '\n.ico-'+name+':before,.ico-'+name+'-after:after{content:"\\'+ code +'"}';
+      html += '<i class="ico ico-'+name+'">ico ico-'+name+'</i><i class="ico-after ico-'+name+'-after">ico-after ico-'+name+'-after</i>';
+    }
+    html = '<style type="text/css">'+css+'</style>'
+         + '<pre>'+css+'</pre>'
+         + html;
+    document.body.innerHTML = html;
+  </script>
+ </body>
+</html>

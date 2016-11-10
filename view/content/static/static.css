@@ -1,0 +1,58 @@
+.contentStatic > .columns {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.contentStatic > .columns > * {
+  display: table-cell;
+  vertical-align: top;
+}
+.contentStatic > .columns > :nth-child(2) {
+  padding-left: 2em;
+}
+.contentStatic label {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  margin-bottom: 1em;
+  position: relative;
+}
+.contentStatic label > * {
+  display: table-cell;
+}
+.contentStatic label > .caption {
+  max-width: 0;
+  min-width: 0;
+  width: 10em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.contentStatic label > :nth-child(2) {
+  width: 100%;
+}
+.contentStatic label > .ico-calendar {
+  position: absolute;
+  right: .4em;
+  top: .5em;
+}
+.contentStatic .ico {
+  display: inline-block;
+  cursor: pointer;
+}
+.contentStatic button.addContent,
+.contentStatic .actions {
+  margin-top: 1em;
+}
+.contentStatic button.addContent:before {
+  margin-right: .5em;
+}
+
+.contentStatic .actions {
+  text-align: right;
+}
+
+@media (max-width: 54em) {
+  .contentStatic > .columns > * {display: block;}
+  .contentStatic > .columns > :last-child {padding-left: 0; padding-top: 2em; }
+  .contentStatic button.addRound {margin-bottom: 1em;}
+}

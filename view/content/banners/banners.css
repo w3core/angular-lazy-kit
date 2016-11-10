@@ -1,0 +1,17 @@
+.contentBanners > .columns {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+.contentBanners > .columns > * {
+  display: table-cell;
+  vertical-align: top;
+}
+.contentBanners > .columns > :nth-child(2) {
+  padding-left: 2em;
+}
+.contentBanners .viewBody {display: block;}
+@media (max-width: 54em) {
+  .contentBanners > .columns > * {display: block;}
+  .contentBanners > .columns > :nth-child(2) {padding-left: 0; padding-top: 2em;}
+}
