@@ -1,5 +1,5 @@
 # angular-lazy-kit
-AngularJS + RequireJS - complete lazy load starter kit
+AngularJS + RequireJS - complete lazy load starter kit.
 
 # quick start
 
